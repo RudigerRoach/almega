@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--TextView
+        android:id="@+id/txtLabel"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="16dp"
+        android:text="Find People View"/>
+    
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtLabel"
+        android:src="@drawable/ic_people"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/-->
+
+
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:measureWithLargestChild="true"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add a Client:"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout0"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="10dp"
+                                android:text="Name:" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="@dimen/client_label_top_padding"
+                                android:text="Surname:" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="@dimen/client_label_top_padding"
+                                android:text="Cellphone:" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="@dimen/client_label_top_padding"
+                                android:text="Email:" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="@dimen/client_label_top_padding"
+                                android:text="Vehicle:" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="@dimen/client_label_top_padding"
+                                android:text="Comments:" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="0.2"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/NewPersonName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:hint="First name"
+                                android:inputType="textPersonName" />
+
+                            <TextView
+                                android:id="@+id/textView50"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginLeft="5dp"
+                                android:alpha="0.5"
+                                android:text="First Name" />
+
+                            <EditText
+                                android:id="@+id/NewPersonSurname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:hint="Last name"
+                                android:inputType="text" />
+
+                            <TextView
+                                android:id="@+id/textView60"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginLeft="5dp"
+                                android:alpha="0.5"
+                                android:text="Last Name" />
+
+                            <EditText
+                                android:id="@+id/NewPersonCellphone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginTop="10dp"
+                                android:hint="Cellphone Number"
+                                android:inputType="text" />
+
+                            <TextView
+                                android:id="@+id/textView70"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginLeft="5dp"
+                                android:alpha="0.5"
+                                android:text="Cellphone Number" />
+
+                            <EditText
+                                android:id="@+id/NewPersonEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginTop="10dp"
+                                android:hint="Email Address"
+                                android:inputType="text" />
+
+                            <TextView
+                                android:id="@+id/textView80"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginLeft="5dp"
+                                android:alpha="0.5"
+                                android:text="Email Address" />
+
+                            <EditText
+                                android:id="@+id/NewPersonVehicleRegNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginTop="10dp"
+                                android:hint="Vehicle Registration Number"
+                                android:inputType="text" />
+
+                            <TextView
+                                android:id="@+id/textView21"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginLeft="5dp"
+                                android:alpha="0.5"
+                                android:text="Vehicle Registration Number" />
+
+                            <EditText
+                                android:id="@+id/NewPersonComments"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginTop="10dp"
+                                android:hint="Optional General Comment Regarding the Client"
+                                android:inputType="text" />
+
+                            <TextView
+                                android:id="@+id/textView22"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginLeft="5dp"
+                                android:alpha="0.5"
+                                android:text="Optional General Comment Regarding the Client" />
+
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="@dimen/labels_top_margin"
+                            android:text="Name:" />
+
+                        <EditText
+                            android:id="@+id/NewPersonName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="@dimen/editText_left_margin"
+                            android:hint="First name"
+                            android:inputType="textPersonName" />
+
+                        <TextView
+                            android:id="@+id/nameHint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="@dimen/hint_labels_left_margin"
+                            android:layout_marginTop="@dimen/hint_labels_top_margin"
+                            android:alpha="0.5"
+                            android:text="First Name" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="@dimen/labels_top_margin"
+                            android:text="Surname:" />
+
+                        <EditText
+                            android:id="@+id/NewPersonSurname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/editText_left_margin"
+                            android:hint="Last name"
+                            android:inputType="text" />
+
+                        <TextView
+                            android:id="@+id/surnameHint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="@dimen/hint_labels_left_margin"
+                            android:layout_marginTop="@dimen/hint_labels_top_margin"
+                            android:alpha="0.5"
+                            android:text="Last Name" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="@dimen/labels_top_margin"
+                            android:text="Email:" />
+
+                        <EditText
+                            android:id="@+id/NewPersonEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="@dimen/editText_left_margin"
+                            android:hint="Email Address"
+                            android:inputType="text" />
+
+                        <TextView
+                            android:id="@+id/emailtHint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="@dimen/hint_labels_left_margin"
+                            android:layout_marginTop="@dimen/hint_labels_top_margin"
+                            android:alpha="0.5"
+                            android:text="Email Address" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="@dimen/labels_top_margin"
+                            android:text="Cellphone:" />
+
+                        <EditText
+                            android:id="@+id/NewPersonCellphone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="@dimen/editText_left_margin"
+                            android:hint="Cellphone Number"
+                            android:inputType="text" />
+
+                        <TextView
+                            android:id="@+id/cellphonetHint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="@dimen/hint_labels_left_margin"
+                            android:layout_marginTop="@dimen/hint_labels_top_margin"
+                            android:alpha="0.5"
+                            android:text="Cellphone Number" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="@dimen/labels_top_margin"
+                            android:text="Vehicle:" />
+
+                        <EditText
+                            android:id="@+id/NewPersonVehicleRegNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="@dimen/editText_left_margin"
+                            android:hint="Vehicle Registration Number"
+                            android:inputType="text" />
+
+                        <TextView
+                            android:id="@+id/vehicleRegtHint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="@dimen/hint_labels_left_margin"
+                            android:layout_marginTop="@dimen/hint_labels_top_margin"
+                            android:alpha="0.5"
+                            android:text="Vehicle Registration Number" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="@dimen/labels_top_margin"
+                            android:text="Comments:" />
+
+                        <EditText
+                            android:id="@+id/NewPersonComments"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="@dimen/editText_left_margin"
+                            android:hint="Optional general comment about the client"
+                            android:inputType="text" />
+
+                        <TextView
+                            android:id="@+id/commentHint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="@dimen/hint_labels_left_margin"
+                            android:layout_marginTop="@dimen/hint_labels_top_margin"
+                            android:alpha="0.5"
+                            android:text="Optional general comment about the client" />
+
+                    </RelativeLayout-->
+
+
+                    <Button
+                        android:id="@+id/SubmitNewClient"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Submit New Client" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Search:"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="top"
+                                        android:layout_marginLeft="16dp"
+                                        android:layout_marginTop="10dp"
+                                        android:text="Name:" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="top"
+                                        android:layout_marginLeft="16dp"
+                                        android:layout_marginTop="@dimen/client_label_top_padding"
+                                        android:text="Surname:" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="top"
+                                        android:layout_marginLeft="16dp"
+                                        android:layout_marginTop="@dimen/client_label_top_padding"
+                                        android:text="Cellphone:" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_weight="0.2"
+                                    android:orientation="vertical">
+
+                                    <EditText
+                                        android:id="@+id/SearchPersonName"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="top"
+                                        android:hint="First name"
+                                        android:inputType="textPersonName" />
+
+                                    <TextView
+                                        android:id="@+id/searchNameHint"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="top"
+                                        android:layout_marginLeft="5dp"
+                                        android:alpha="0.5"
+                                        android:text="First Name" />
+
+                                    <EditText
+                                        android:id="@+id/SearchPersonSurname"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:hint="Last name"
+                                        android:inputType="text" />
+
+                                    <TextView
+                                        android:id="@+id/SearchSurnameHint"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="top"
+                                        android:layout_marginLeft="5dp"
+                                        android:alpha="0.5"
+                                        android:text="Last Name" />
+
+                                    <EditText
+                                        android:id="@+id/SearchPersonCellphone"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="top"
+                                        android:layout_marginTop="10dp"
+                                        android:hint="Cellphone Number"
+                                        android:inputType="text" />
+
+                                    <TextView
+                                        android:id="@+id/SearchCellphonetHint"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="top"
+                                        android:layout_marginLeft="5dp"
+                                        android:alpha="0.5"
+                                        android:text="Cellphone Number" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="0.5"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Result:"
+                                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                                <ListView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:id="@+id/searchListView" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Update Client:"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Name:" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="@dimen/client_label_top_padding"
+                                    android:text="Surname:" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="@dimen/client_label_top_padding"
+                                    android:text="Cellphone:" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="@dimen/client_label_top_padding"
+                                    android:text="Email:" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="@dimen/client_label_top_padding"
+                                    android:text="Vehicle:" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="@dimen/client_label_top_padding"
+                                    android:text="Comments:" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="0.2"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/UpdatePersonName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:hint="First name"
+                                    android:inputType="textPersonName" />
+
+                                <TextView
+                                    android:id="@+id/textView5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:layout_marginLeft="5dp"
+                                    android:alpha="0.5"
+                                    android:text="First Name" />
+
+                                <EditText
+                                    android:id="@+id/UpdatePersonSurname"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:hint="Last name"
+                                    android:inputType="text" />
+
+                                <TextView
+                                    android:id="@+id/textView6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:layout_marginLeft="5dp"
+                                    android:alpha="0.5"
+                                    android:text="Last Name" />
+
+                                <EditText
+                                    android:id="@+id/UpdatePersonCell"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:layout_marginTop="10dp"
+                                    android:hint="Cellphone Number"
+                                    android:inputType="text" />
+
+                                <TextView
+                                    android:id="@+id/textView7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:layout_marginLeft="5dp"
+                                    android:alpha="0.5"
+                                    android:text="Cellphone Number" />
+
+                                <EditText
+                                    android:id="@+id/UpdatePersonEmail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:layout_marginTop="10dp"
+                                    android:hint="Email Address"
+                                    android:inputType="text" />
+
+                                <TextView
+                                    android:id="@+id/textView8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:layout_marginLeft="5dp"
+                                    android:alpha="0.5"
+                                    android:text="Email Address" />
+
+                                <EditText
+                                    android:id="@+id/UpdatePersonVehicle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:layout_marginTop="10dp"
+                                    android:hint="Vehicle Registration Number"
+                                    android:inputType="text" />
+
+                                <TextView
+                                    android:id="@+id/textView9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:layout_marginLeft="5dp"
+                                    android:alpha="0.5"
+                                    android:text="Vehicle Registration Number" />
+
+                                <EditText
+                                    android:id="@+id/UpdatePersonComments"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:layout_marginTop="10dp"
+                                    android:hint="Optional General Comment Regarding the Client"
+                                    android:inputType="text" />
+
+                                <TextView
+                                    android:id="@+id/textView10"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:layout_marginLeft="5dp"
+                                    android:alpha="0.5"
+                                    android:text="Optional General Comment Regarding the Client" />
+
+                                <Button
+                                    android:id="@+id/btnSubmitClientChanges"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="30dp"
+                                    android:text="Apply Changes" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </TabHost>
+</RelativeLayout>

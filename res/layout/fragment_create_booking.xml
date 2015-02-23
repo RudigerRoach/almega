@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:id="@+id/fragment_create_booking"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/findClient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/CB_Linear_Padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Client Cell:"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Client Cell"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/setDateInterval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/CB_Linear_Padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From:"/>
+
+        <CalendarView
+            android:id="@+id/dateFrom"
+            android:layout_width="350dp"
+            android:layout_height="300dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From:"/>
+        <CalendarView
+            android:id="@+id/dateTo"
+            android:layout_width="350dp"
+            android:layout_height="300dp"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/standList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/CB_Linear_Padding">
+        <TextView
+            android:id="@+id/totalDays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total: x days"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stand nr:"/>
+        <Spinner
+            android:id="@+id/standListSpinner"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"></Spinner>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="extra people:"/>
+        <Spinner
+            android:id="@+id/ExtraPeopleListSpinner"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            ></Spinner>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/requestsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/CB_Linear_Padding"
+        android:baselineAligned="false">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginRight="15dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Special Requests:"/>
+            <EditText
+                android:id="@+id/specialRequests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Add any special requests"
+                android:inputType="textMultiLine"
+                />
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Requests History:"/>
+            <EditText
+                android:id="@+id/requestHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="The current client doesn't have a request history"
+
+                android:inputType="textMultiLine"
+                />
+            </LinearLayout>
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Booking"
+
+            android:layout_marginTop="@dimen/CB_Linear_Padding"
+            android:layout_gravity="bottom"/>
+    </LinearLayout>
+</LinearLayout>
+
+
+</LinearLayout>
