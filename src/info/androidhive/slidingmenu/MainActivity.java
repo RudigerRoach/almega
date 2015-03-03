@@ -114,7 +114,13 @@ public class MainActivity extends Activity {
     private void runCouchBaseTests() {
         String TAG = "manual test runner";
         Log.d(TAG,"creaint persistance object");
-        CouchbasePersistance persistance = new CouchbasePersistance();
+
+        try {
+            CouchbasePersistance persistance = new CouchbasePersistance();
+        } catch (Exception e) {
+            Log.d("persistance error",e.getMessage());
+        }
+
         Log.d(TAG, "persistance object created");
     }
 

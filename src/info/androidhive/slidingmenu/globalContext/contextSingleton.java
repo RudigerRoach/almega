@@ -15,7 +15,7 @@ public class contextSingleton {
     private contextSingleton() {
     }
 
-    private Context context;
+    private Context context = null;
 
     public Context getContext() {
         return context;

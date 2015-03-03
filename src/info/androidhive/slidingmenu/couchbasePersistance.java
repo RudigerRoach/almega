@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.Log;
 import com.couchbase.lite.Manager;
 import com.couchbase.lite.android.AndroidContext;
+import info.androidhive.slidingmenu.Exceptions.globalContextNotSetException;
 import info.androidhive.slidingmenu.globalContext.contextSingleton;
 
 import java.io.IOException;
@@ -17,8 +18,12 @@ public class CouchbasePersistance implements PersistanceInterface {
     private Context context;
     private final String TAG = "couchbase internal";
 
-    public CouchbasePersistance(){
+    public CouchbasePersistance() throws Exception {
         context = contextSingleton.getInstance().getContext();
+        if (context == null){
+            throw new globalContextNotSetException();
+        }
+
         // create a manager
         try {
             manager = new Manager(new AndroidContext(context), Manager.DEFAULT_OPTIONS);
