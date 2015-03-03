@@ -2,6 +2,7 @@ package info.androidhive.slidingmenu;
 
 import android.widget.Toast;
 import info.androidhive.slidingmenu.adapter.NavDrawerListAdapter;
+import info.androidhive.slidingmenu.globalContext.contextSingleton;
 import info.androidhive.slidingmenu.model.NavDrawerItem;
 
 import java.util.ArrayList;
@@ -45,6 +46,9 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_main);
+
+        contextSingleton.getInstance().setContext(getApplication());
+        runCouchBaseTests();
 
 		mTitle = mDrawerTitle = getTitle();
 
@@ -107,7 +111,14 @@ public class MainActivity extends Activity {
 		}
 	}
 
-	/**
+    private void runCouchBaseTests() {
+        String TAG = "manual test runner";
+        Log.d(TAG,"creaint persistance object");
+        CouchbasePersistance persistance = new CouchbasePersistance();
+        Log.d(TAG, "persistance object created");
+    }
+
+    /**
 	 * Slide menu item click listener
 	 * */
 	private class SlideMenuClickListener implements
