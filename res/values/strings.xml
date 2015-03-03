@@ -23,9 +23,9 @@
     </array>
 
     <array name="Extra_people">
-        <string>0</string>
-        <string>1</string>
-        <string>2</string>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
     </array>
     
     <!-- Content Description -->
